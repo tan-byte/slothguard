@@ -1,0 +1,25 @@
+# SlothGuard Configuration
+capture:
+  interval_seconds: 3  # Check more often for demo
+  downscale_factor: 4   # Low resolution capture
+
+stagnation:
+  threshold_seconds: 15  # Trigger after 15s of stillness (down from 90)
+  ssim_threshold: 0.98
+
+cooldown:
+  min_minutes: 0.1  # 6 seconds
+  max_minutes: 0.25 # 15 seconds
+
+ollama:
+  base_url: "http://localhost:11434"
+  model: "moondream"  # or "gemma2:2b"
+  timeout: 30
+
+piper:
+  model_path: "en_US-lessac-medium.onnx"
+  config_path: "en_US-lessac-medium.onnx.json"
+  voice_speed: 1.0
+
+intervention:
+  show_mascot: true  # Show calming mascot with captions
